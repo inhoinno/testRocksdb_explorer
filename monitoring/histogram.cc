@@ -195,7 +195,7 @@ std::string HistogramStat::ToString() const {
   r.append(buf);
   snprintf(buf, sizeof(buf),
            "Percentiles: "
-	   "P50: %.2f P75: %.2f P99: %.2f P99.1: %.2f P99.2: %.2f P99.3: %.2f P99.4: %.2f P99.5: %.2f P99.6: %.2f P99.7: %.2f P99.8: %.2f P99.9: %.2f P99.91: %.2f P99.92: %.2f P99.93: %.2f P99.94: %.2f P99.95: %.2f P99.96: %.2f P99.97: %.2f P99.98: %.2f P99.99: %.2f\n",Percentile(50), Percentile(75), Percentile(99), Percentile(99.1),Percentile(99.2), Percentile(99.3),Percentile(99.4), Percentile(99.5), Percentile(99.6), Percentile(99.7), Percentile(99.8), Percentile(99.9), Percentile(99.91),Percentile(99.92),Percentile(99.93),Percentile(99.94),Percentile(99.95),Percentile(99.96),Percentile(99.97),Percentile(99.98),Percentile(99.99));
+	   "P50: %.2f P75: %.2f P99: %.2f P99.1: %.2f P99.2: %.2f P99.3: %.2f P99.4: %.2f P99.5: %.2f P99.6: %.2f P99.7: %.2f P99.8: %.2f P99.9: %.2f P99.91: %.2f P99.92: %.2f P99.93: %.2f P99.94: %.2f P99.95: %.2f P99.96: %.2f P99.97: %.2f P99.98: %.2f P99.99: %.2f P100: %.2f\n",Percentile(50), Percentile(75), Percentile(99), Percentile(99.1),Percentile(99.2), Percentile(99.3),Percentile(99.4), Percentile(99.5), Percentile(99.6), Percentile(99.7), Percentile(99.8), Percentile(99.9), Percentile(99.91),Percentile(99.92),Percentile(99.93),Percentile(99.94),Percentile(99.95),Percentile(99.96),Percentile(99.97),Percentile(99.98),Percentile(99.99),Percentile(100));
   r.append(buf);
   r.append("------------------------------------------------------\n");
   if (cur_num == 0) return r;   // all buckets are empty

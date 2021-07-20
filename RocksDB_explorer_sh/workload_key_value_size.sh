@@ -5,7 +5,7 @@ RESULT_PATH="../result_txt/"
 KEY_SIZE=$2
 VALUE_SIZE=$3
 NUM=5000000
-BENCHMARK=$4
+BENCHMARK=fillrandom,levelstats
 
 print > $RESULT_PATH/key_value_size_result.txt
 echo ========== key size = $KEY_SIZE, value size = $VALUE_SIZE =========== >> $RESULT_PATH/key_value_size_result.txt 

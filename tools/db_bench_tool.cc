@@ -3384,6 +3384,8 @@ class Benchmark {
                     s.ToString().c_str());
             ErrorExit();
           }
+          fprintf(stdout, "db_bench_tool.cc:3387 db_.db.StartTrace() : %lu",FLAGS_env->GetSystemClock()->NowMicros());
+
           s = db_.db->StartTrace(trace_options_, std::move(trace_writer));
           if (!s.ok()) {
             fprintf(stderr, "Encountered an error starting a trace, %s\n",
@@ -3470,6 +3472,7 @@ class Benchmark {
 
 #ifndef ROCKSDB_LITE
     if (name != "replay" && FLAGS_trace_file != "") {
+      fprintf(stdout, "db_bench_tool.cc:3475 db_.db.EndTrace() : %lu",FLAGS_env->GetSystemClock()->NowMicros());
       Status s = db_.db->EndTrace();
       if (!s.ok()) {
         fprintf(stderr, "Encountered an error ending the trace, %s\n",
