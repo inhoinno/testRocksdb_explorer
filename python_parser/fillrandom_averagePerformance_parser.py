@@ -27,18 +27,13 @@ counter = 0
 while line != '':
     line = fr.readline()
     mylist = line.split(' ')
-    if _init.match(mylist[0]) != None and counter == 0:
-        fw.write(''.join(mylist))
+    #if _init.match(mylist[0]) != None:
+        #fw.write(''.join(mylist))
     if mylist[0] == _parser:
         stringbuilder = []
         mylist = ' '.join(mylist)
         mylist = mylist.split()
-        for i in np.arange(0, len(mylist[2:]), 2):
-            if __parser.match(mylist[3+i]) != None:
-                stringbuilder.append(__parser.search(mylist[2+i]).group(0))
-                stringbuilder.append(',')
-                stringbuilder.append(mylist[3+i])
-                stringbuilder.append(',')
-        fw.write(''.join(stringbuilder))
+        #print(mylist)
+        fw.write(','.join(mylist))
 fr.close()
 fw.close()

@@ -1,7 +1,7 @@
 import os
 DEV_PATH="../mnt"
 RESULT_PATH="../result_txt"
-NUM=50#00000
+NUM=5000000
 RESULT_FILE="test7_COMPACTIONSTYLE_BENCH_kKEY_vVALUE.txt"
 NAME="test7_report_COMPACTIONSTYLE_BENCH_kKEY_vVALUE.csv"
 key_vars=[16,32,64,128,256,1024]
@@ -83,9 +83,9 @@ for i in compactionstyle:
                 PARSER_RESULT = PARSER_RESULT.replace("KEY",str(k))
                 PARSER_RESULT = PARSER_RESULT.replace("VALUE",str(v))
                 PARSER_RESULT2 = PARSER_RESULT2.replace("KEY",str(k))
-                PARSER_RESULT2 = PARSER_RESULT2.replace("VALUE",str(k))
+                PARSER_RESULT2 = PARSER_RESULT2.replace("VALUE",str(v))
                 PARSER_RESULT3 = PARSER_RESULT3.replace("KEY",str(k))
-                PARSER_RESULT3 = PARSER_RESULT3.replace("VALUE",str(k))
+                PARSER_RESULT3 = PARSER_RESULT3.replace("VALUE",str(v))
 
                 RESULT_FILE = RESULT_FILE.replace("BENCH",b)
                 PARSER_RESULT = PARSER_RESULT.replace("BENCH",b)
