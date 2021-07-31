@@ -2,7 +2,7 @@
 
 DEV_PATH="../mnt"
 RESULT_PATH="../result_txt/"
-NUM=5000000
+NUM=500
 BENCHMARK=fillrandom,levelstats,stats
 RESULT_FILE="small_fillrandom_key"
 RESULT_FILE2="small_readrandom_key"

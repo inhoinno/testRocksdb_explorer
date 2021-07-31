@@ -1,0 +1,1337 @@
+=========== readrandom Compaction Style = 1 key size = 64, value size = 1024, block cache size = 67108864 ===========
+benchmark.Run() start : 1627589205587377
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Date:	Fri Jul 30 05:06:45 2021
+Keys:       64 bytes each (+ 0 bytes user-defined timestamp)
+Values:     1024 bytes each (512 bytes after compression)
+Entries:    5000000
+Prefix:    0 bytes
+Keys per prefix:    0
+RawSize:    5188.0 MB (estimated)
+FileSize:   2746.6 MB (estimated)
+Write rate: 0 bytes/second
+Read rate: 0 ops/second
+Compression: Snappy
+Compression sampling rate: 0
+Memtablerep: skip_list
+Perf Level: 3
+WARNING: Assertions are enabled; benchmarks unnecessarily slow
+------------------------------------------------
+DB path: [../mnt]
+readrandom   :      67.912 micros/op 14724 ops/sec;   15.3 MB/s (5000000 of 5000000 found)
+ PERF_CONTEXT:
+user_key_comparison_count = 1238381396, block_cache_hit_count = 4175691, block_read_count = 41659364, block_read_byte = 101639345255, block_read_time = 116800362057, block_cache_index_hit_count = 0, index_block_read_count = 0, block_cache_filter_hit_count = 0, filter_block_read_count = 0, compression_dict_block_read_count = 0, block_checksum_time = 6863514953, block_decompress_time = 56675288500, get_read_bytes = 5120000000, multiget_read_bytes = 0, iter_read_bytes = 0, internal_key_skipped_count = 0, internal_delete_skipped_count = 0, internal_recent_skipped_count = 0, internal_merge_count = 0, write_wal_time = 0, get_snapshot_time = 1523832856, get_from_memtable_time = 13279974575, get_from_memtable_count = 5000000, get_post_process_time = 962863504, get_from_output_files_time = 320760044212, seek_on_memtable_time = 0, seek_on_memtable_count = 0, next_on_memtable_count = 0, prev_on_memtable_count = 0, seek_child_seek_time = 0, seek_child_seek_count = 0, seek_min_heap_time = 0, seek_internal_seek_time = 0, find_next_user_entry_time = 0, write_pre_and_post_process_time = 0, write_memtable_time = 0, write_thread_wait_nanos = 0, write_scheduling_flushes_compactions_time = 0, db_mutex_lock_nanos = 0, db_condition_wait_nanos = 0, merge_operator_time_nanos = 0, write_delay_time = 0, read_index_block_nanos = 0, read_filter_block_nanos = 0, new_table_block_iter_nanos = 233311254760, new_table_iterator_nanos = 0, block_seek_nanos = 52037711243, find_table_nanos = 0, bloom_memtable_hit_count = 0, bloom_memtable_miss_count = 0, bloom_sst_hit_count = 0, bloom_sst_miss_count = 0, key_lock_wait_time = 0, key_lock_wait_count = 0, env_new_sequential_file_nanos = 0, env_new_random_access_file_nanos = 0, env_new_writable_file_nanos = 0, env_reuse_writable_file_nanos = 0, env_new_random_rw_file_nanos = 0, env_new_directory_nanos = 0, env_file_exists_nanos = 0, env_get_children_nanos = 0, env_get_children_file_attributes_nanos = 0, env_delete_file_nanos = 0, env_create_dir_nanos = 0, env_create_dir_if_missing_nanos = 0, env_delete_dir_nanos = 0, env_get_file_size_nanos = 0, env_get_file_modification_time_nanos = 0, env_rename_file_nanos = 0, env_link_file_nanos = 0, env_lock_file_nanos = 0, env_unlock_file_nanos = 0, env_new_logger_nanos = 0, get_cpu_nanos = 0, iter_next_cpu_nanos = 0, iter_prev_cpu_nanos = 0, iter_seek_cpu_nanos = 0, bloom_filter_useful = 0@level0, 0@level1, 0@level2, 0@level3, 0@level4, 0@level5, 0@level6, bloom_filter_full_positive = 0@level0, 0@level1, 0@level2, 0@level3, 0@level4, 0@level5, 0@level6, bloom_filter_full_true_positive = 0@level0, 0@level1, 0@level2, 0@level3, 0@level4, 0@level5, 0@level6, block_cache_hit_count = 3947707@level0, 104959@level1, 52338@level2, 29572@level3, 27699@level4, 11456@level5, 1960@level6, block_cache_miss_count = 25551806@level0, 4187012@level1, 3703774@level2, 3000538@level3, 2249567@level4, 1803492@level5, 1163175@level6
+Latency for percentile 0 : 1.000000
+Latency for percentile 1 : 2.373306
+Latency for percentile 2 : 3.778061
+Latency for percentile 3 : 5.710800
+Latency for percentile 4 : 8.390283
+Latency for percentile 5 : 11.104013
+Latency for percentile 6 : 13.743928
+Latency for percentile 7 : 16.267189
+Latency for percentile 8 : 18.684567
+Latency for percentile 9 : 21.101944
+Latency for percentile 10 : 23.321220
+Latency for percentile 11 : 25.423400
+Latency for percentile 12 : 27.525580
+Latency for percentile 13 : 29.627760
+Latency for percentile 14 : 31.729940
+Latency for percentile 15 : 33.832120
+Latency for percentile 16 : 34.942570
+Latency for percentile 17 : 35.966946
+Latency for percentile 18 : 36.991323
+Latency for percentile 19 : 38.015699
+Latency for percentile 20 : 39.040076
+Latency for percentile 21 : 40.064453
+Latency for percentile 22 : 41.088829
+Latency for percentile 23 : 42.113206
+Latency for percentile 24 : 43.137582
+Latency for percentile 25 : 44.161959
+Latency for percentile 26 : 45.186335
+Latency for percentile 27 : 46.210712
+Latency for percentile 28 : 47.235088
+Latency for percentile 29 : 48.259465
+Latency for percentile 30 : 49.283841
+Latency for percentile 31 : 50.308218
+Latency for percentile 32 : 51.185202
+Latency for percentile 33 : 51.755617
+Latency for percentile 34 : 52.326032
+Latency for percentile 35 : 52.896446
+Latency for percentile 36 : 53.466861
+Latency for percentile 37 : 54.037276
+Latency for percentile 38 : 54.607691
+Latency for percentile 39 : 55.178105
+Latency for percentile 40 : 55.748520
+Latency for percentile 41 : 56.318935
+Latency for percentile 42 : 56.889350
+Latency for percentile 43 : 57.459764
+Latency for percentile 44 : 58.030179
+Latency for percentile 45 : 58.600594
+Latency for percentile 46 : 59.171009
+Latency for percentile 47 : 59.741423
+Latency for percentile 48 : 60.311838
+Latency for percentile 49 : 60.882253
+Latency for percentile 50 : 61.452667
+Latency for percentile 51 : 62.023082
+Latency for percentile 52 : 62.593497
+Latency for percentile 53 : 63.163912
+Latency for percentile 54 : 63.734326
+Latency for percentile 55 : 64.304741
+Latency for percentile 56 : 64.875156
+Latency for percentile 57 : 65.445571
+Latency for percentile 58 : 66.015985
+Latency for percentile 59 : 66.586400
+Latency for percentile 60 : 67.156815
+Latency for percentile 61 : 67.727230
+Latency for percentile 62 : 68.297644
+Latency for percentile 63 : 68.868059
+Latency for percentile 64 : 69.438474
+Latency for percentile 65 : 70.008888
+Latency for percentile 66 : 70.579303
+Latency for percentile 67 : 71.149718
+Latency for percentile 68 : 71.720133
+Latency for percentile 69 : 72.290547
+Latency for percentile 70 : 72.860962
+Latency for percentile 71 : 73.431377
+Latency for percentile 72 : 74.001792
+Latency for percentile 73 : 74.572206
+Latency for percentile 74 : 75.142621
+Latency for percentile 75 : 75.713036
+Latency for percentile 76 : 76.860874
+Latency for percentile 77 : 78.593295
+Latency for percentile 78 : 80.325715
+Latency for percentile 79 : 82.058136
+Latency for percentile 80 : 83.790556
+Latency for percentile 81 : 85.522977
+Latency for percentile 82 : 87.255398
+Latency for percentile 83 : 88.987818
+Latency for percentile 84 : 90.720239
+Latency for percentile 85 : 92.452659
+Latency for percentile 86 : 94.185080
+Latency for percentile 87 : 95.917500
+Latency for percentile 88 : 97.649921
+Latency for percentile 89 : 99.382341
+Latency for percentile 90 : 101.114762
+Latency for percentile 91 : 102.847182
+Latency for percentile 92 : 104.579603
+Latency for percentile 93 : 106.312023
+Latency for percentile 94 : 108.044444
+Latency for percentile 95 : 109.776864
+Latency for percentile 96 : 161.116761
+Latency for percentile 97 : 202.573315
+Latency for percentile 98 : 240.958084
+Latency for percentile 99 : 369.263135
+Latency for percentile 100 : 98394.000000
+Microseconds per read:
+Count: 5000000 Average: 67.9127  StdDev: 94.06
+Min: 1  Median: 61.4527  Max: 98394
+Percentiles: P50: 61.45 P75: 75.71 P99: 369.26 P99.1: 392.15 P99.2: 431.12 P99.3: 470.09 P99.4: 509.06 P99.5: 548.04 P99.6: 594.95 P99.7: 678.11 P99.8: 761.26 P99.9: 844.42 P99.91: 852.74 P99.92: 861.05 P99.93: 869.37 P99.94: 935.65 P99.95: 1006.70 P99.96: 1077.75 P99.97: 1148.80 P99.98: 1219.85 P99.99: 1290.91 P100: 98394.00
+------------------------------------------------------
+[       0,       1 ]     3498   0.070%   0.070% 
+(       1,       2 ]    37079   0.742%   0.812% 
+(       2,       3 ]    25242   0.505%   1.316% 
+(       3,       4 ]    43931   0.879%   2.195% 
+(       4,       6 ]    47054   0.941%   3.136% 
+(       6,      10 ]    72286   1.446%   4.582% 
+(      10,      15 ]    94700   1.894%   6.476% 
+(      15,      22 ]   144785   2.896%   9.372% #
+(      22,      34 ]   285418   5.708%  15.080% #
+(      34,      51 ]   829773  16.595%  31.675% ###
+(      51,      76 ]  2191388  43.828%  75.503% #########
+(      76,     110 ]   981286  19.626%  95.129% ####
+(     110,     170 ]    51130   1.023%  96.151% 
+(     170,     250 ]   104208   2.084%  98.236% 
+(     250,     380 ]    41663   0.833%  99.069% 
+(     380,     580 ]    25660   0.513%  99.582% 
+(     580,     870 ]    17437   0.349%  99.931% 
+(     870,    1300 ]     3026   0.061%  99.991% 
+(    1300,    1900 ]      355   0.007%  99.998% 
+(    1900,    2900 ]       62   0.001% 100.000% 
+(    2900,    4400 ]        6   0.000% 100.000% 
+(    4400,    6600 ]        3   0.000% 100.000% 
+(    6600,    9900 ]        1   0.000% 100.000% 
+(    9900,   14000 ]        3   0.000% 100.000% 
+(   22000,   33000 ]        3   0.000% 100.000% 
+(   33000,   50000 ]        1   0.000% 100.000% 
+(   75000,  110000 ]        2   0.000% 100.000% 
+
+
+Level Files Size(MB)
+--------------------
+  0        6      208
+  1        3      169
+  2        5      266
+  3        6      328
+  4        4      234
+  5        7      390
+  6       16      990
+
+Latency for percentile 0 : 0.000000
+Latency for percentile 1 : 0.020762
+Latency for percentile 2 : 0.041524
+Latency for percentile 3 : 0.062286
+Latency for percentile 4 : 0.083048
+Latency for percentile 5 : 0.103810
+Latency for percentile 6 : 0.124572
+Latency for percentile 7 : 0.145333
+Latency for percentile 8 : 0.166095
+Latency for percentile 9 : 0.186857
+Latency for percentile 10 : 0.207619
+Latency for percentile 11 : 0.228381
+Latency for percentile 12 : 0.249143
+Latency for percentile 13 : 0.269905
+Latency for percentile 14 : 0.290667
+Latency for percentile 15 : 0.311429
+Latency for percentile 16 : 0.332191
+Latency for percentile 17 : 0.352953
+Latency for percentile 18 : 0.373715
+Latency for percentile 19 : 0.394476
+Latency for percentile 20 : 0.415238
+Latency for percentile 21 : 0.436000
+Latency for percentile 22 : 0.456762
+Latency for percentile 23 : 0.477524
+Latency for percentile 24 : 0.498286
+Latency for percentile 25 : 0.519048
+Latency for percentile 26 : 0.539810
+Latency for percentile 27 : 0.560572
+Latency for percentile 28 : 0.581334
+Latency for percentile 29 : 0.602096
+Latency for percentile 30 : 0.622858
+Latency for percentile 31 : 0.643620
+Latency for percentile 32 : 0.664381
+Latency for percentile 33 : 0.685143
+Latency for percentile 34 : 0.705905
+Latency for percentile 35 : 0.726667
+Latency for percentile 36 : 0.747429
+Latency for percentile 37 : 0.768191
+Latency for percentile 38 : 0.788953
+Latency for percentile 39 : 0.809715
+Latency for percentile 40 : 0.830477
+Latency for percentile 41 : 0.851239
+Latency for percentile 42 : 0.872001
+Latency for percentile 43 : 0.892763
+Latency for percentile 44 : 0.913524
+Latency for percentile 45 : 0.934286
+Latency for percentile 46 : 0.955048
+Latency for percentile 47 : 0.975810
+Latency for percentile 48 : 0.996572
+Latency for percentile 49 : 1.016325
+Latency for percentile 50 : 1.035879
+Latency for percentile 51 : 1.055433
+Latency for percentile 52 : 1.074986
+Latency for percentile 53 : 1.094540
+Latency for percentile 54 : 1.114094
+Latency for percentile 55 : 1.133647
+Latency for percentile 56 : 1.153201
+Latency for percentile 57 : 1.172755
+Latency for percentile 58 : 1.192309
+Latency for percentile 59 : 1.211862
+Latency for percentile 60 : 1.231416
+Latency for percentile 61 : 1.250970
+Latency for percentile 62 : 1.270523
+Latency for percentile 63 : 1.290077
+Latency for percentile 64 : 1.309631
+Latency for percentile 65 : 1.329184
+Latency for percentile 66 : 1.348738
+Latency for percentile 67 : 1.368292
+Latency for percentile 68 : 1.387845
+Latency for percentile 69 : 1.407399
+Latency for percentile 70 : 1.426953
+Latency for percentile 71 : 1.446507
+Latency for percentile 72 : 1.466060
+Latency for percentile 73 : 1.485614
+Latency for percentile 74 : 1.505168
+Latency for percentile 75 : 1.524721
+Latency for percentile 76 : 1.544275
+Latency for percentile 77 : 1.563829
+Latency for percentile 78 : 1.583382
+Latency for percentile 79 : 1.602936
+Latency for percentile 80 : 1.622490
+Latency for percentile 81 : 1.642043
+Latency for percentile 82 : 1.661597
+Latency for percentile 83 : 1.681151
+Latency for percentile 84 : 1.700705
+Latency for percentile 85 : 1.720258
+Latency for percentile 86 : 1.739812
+Latency for percentile 87 : 1.759366
+Latency for percentile 88 : 1.778919
+Latency for percentile 89 : 1.798473
+Latency for percentile 90 : 1.818027
+Latency for percentile 91 : 1.837580
+Latency for percentile 92 : 1.857134
+Latency for percentile 93 : 1.876688
+Latency for percentile 94 : 1.896241
+Latency for percentile 95 : 1.915795
+Latency for percentile 96 : 1.935349
+Latency for percentile 97 : 1.954903
+Latency for percentile 98 : 1.974456
+Latency for percentile 99 : 1.994010
+Latency for percentile 100 : 18410.000000
+Latency for percentile 0 : 0.000000
+Latency for percentile 1 : 0.023817
+Latency for percentile 2 : 0.047634
+Latency for percentile 3 : 0.071451
+Latency for percentile 4 : 0.095268
+Latency for percentile 5 : 0.119085
+Latency for percentile 6 : 0.142902
+Latency for percentile 7 : 0.166719
+Latency for percentile 8 : 0.190536
+Latency for percentile 9 : 0.214353
+Latency for percentile 10 : 0.238170
+Latency for percentile 11 : 0.261987
+Latency for percentile 12 : 0.285804
+Latency for percentile 13 : 0.309621
+Latency for percentile 14 : 0.333438
+Latency for percentile 15 : 0.357255
+Latency for percentile 16 : 0.381072
+Latency for percentile 17 : 0.404889
+Latency for percentile 18 : 0.428706
+Latency for percentile 19 : 0.452523
+Latency for percentile 20 : 0.476340
+Latency for percentile 21 : 0.500157
+Latency for percentile 22 : 0.523974
+Latency for percentile 23 : 0.547791
+Latency for percentile 24 : 0.571608
+Latency for percentile 25 : 0.595425
+Latency for percentile 26 : 0.619242
+Latency for percentile 27 : 0.643059
+Latency for percentile 28 : 0.666876
+Latency for percentile 29 : 0.690693
+Latency for percentile 30 : 0.714510
+Latency for percentile 31 : 0.738327
+Latency for percentile 32 : 0.762144
+Latency for percentile 33 : 0.785961
+Latency for percentile 34 : 0.809778
+Latency for percentile 35 : 0.833596
+Latency for percentile 36 : 0.857413
+Latency for percentile 37 : 0.881230
+Latency for percentile 38 : 0.905047
+Latency for percentile 39 : 0.928864
+Latency for percentile 40 : 0.952681
+Latency for percentile 41 : 0.976498
+Latency for percentile 42 : 1.000233
+Latency for percentile 43 : 1.017889
+Latency for percentile 44 : 1.035545
+Latency for percentile 45 : 1.053201
+Latency for percentile 46 : 1.070856
+Latency for percentile 47 : 1.088512
+Latency for percentile 48 : 1.106168
+Latency for percentile 49 : 1.123824
+Latency for percentile 50 : 1.141480
+Latency for percentile 51 : 1.159136
+Latency for percentile 52 : 1.176791
+Latency for percentile 53 : 1.194447
+Latency for percentile 54 : 1.212103
+Latency for percentile 55 : 1.229759
+Latency for percentile 56 : 1.247415
+Latency for percentile 57 : 1.265070
+Latency for percentile 58 : 1.282726
+Latency for percentile 59 : 1.300382
+Latency for percentile 60 : 1.318038
+Latency for percentile 61 : 1.335694
+Latency for percentile 62 : 1.353350
+Latency for percentile 63 : 1.371005
+Latency for percentile 64 : 1.388661
+Latency for percentile 65 : 1.406317
+Latency for percentile 66 : 1.423973
+Latency for percentile 67 : 1.441629
+Latency for percentile 68 : 1.459284
+Latency for percentile 69 : 1.476940
+Latency for percentile 70 : 1.494596
+Latency for percentile 71 : 1.512252
+Latency for percentile 72 : 1.529908
+Latency for percentile 73 : 1.547564
+Latency for percentile 74 : 1.565219
+Latency for percentile 75 : 1.582875
+Latency for percentile 76 : 1.600531
+Latency for percentile 77 : 1.618187
+Latency for percentile 78 : 1.635843
+Latency for percentile 79 : 1.653498
+Latency for percentile 80 : 1.671154
+Latency for percentile 81 : 1.688810
+Latency for percentile 82 : 1.706466
+Latency for percentile 83 : 1.724122
+Latency for percentile 84 : 1.741778
+Latency for percentile 85 : 1.759433
+Latency for percentile 86 : 1.777089
+Latency for percentile 87 : 1.794745
+Latency for percentile 88 : 1.812401
+Latency for percentile 89 : 1.830057
+Latency for percentile 90 : 1.847712
+Latency for percentile 91 : 1.865368
+Latency for percentile 92 : 1.883024
+Latency for percentile 93 : 1.900680
+Latency for percentile 94 : 1.918336
+Latency for percentile 95 : 1.935992
+Latency for percentile 96 : 1.953647
+Latency for percentile 97 : 1.971303
+Latency for percentile 98 : 1.988959
+Latency for percentile 99 : 2.849264
+Latency for percentile 100 : 17808.000000
+Latency for percentile 0 : 0.000000
+Latency for percentile 1 : 0.023012
+Latency for percentile 2 : 0.046025
+Latency for percentile 3 : 0.069037
+Latency for percentile 4 : 0.092049
+Latency for percentile 5 : 0.115061
+Latency for percentile 6 : 0.138074
+Latency for percentile 7 : 0.161086
+Latency for percentile 8 : 0.184098
+Latency for percentile 9 : 0.207110
+Latency for percentile 10 : 0.230123
+Latency for percentile 11 : 0.253135
+Latency for percentile 12 : 0.276147
+Latency for percentile 13 : 0.299159
+Latency for percentile 14 : 0.322172
+Latency for percentile 15 : 0.345184
+Latency for percentile 16 : 0.368196
+Latency for percentile 17 : 0.391208
+Latency for percentile 18 : 0.414221
+Latency for percentile 19 : 0.437233
+Latency for percentile 20 : 0.460245
+Latency for percentile 21 : 0.483258
+Latency for percentile 22 : 0.506270
+Latency for percentile 23 : 0.529282
+Latency for percentile 24 : 0.552294
+Latency for percentile 25 : 0.575307
+Latency for percentile 26 : 0.598319
+Latency for percentile 27 : 0.621331
+Latency for percentile 28 : 0.644343
+Latency for percentile 29 : 0.667356
+Latency for percentile 30 : 0.690368
+Latency for percentile 31 : 0.713380
+Latency for percentile 32 : 0.736392
+Latency for percentile 33 : 0.759405
+Latency for percentile 34 : 0.782417
+Latency for percentile 35 : 0.805429
+Latency for percentile 36 : 0.828442
+Latency for percentile 37 : 0.851454
+Latency for percentile 38 : 0.874466
+Latency for percentile 39 : 0.897478
+Latency for percentile 40 : 0.920491
+Latency for percentile 41 : 0.943503
+Latency for percentile 42 : 0.966515
+Latency for percentile 43 : 0.989527
+Latency for percentile 44 : 1.009987
+Latency for percentile 45 : 1.028314
+Latency for percentile 46 : 1.046641
+Latency for percentile 47 : 1.064969
+Latency for percentile 48 : 1.083296
+Latency for percentile 49 : 1.101623
+Latency for percentile 50 : 1.119951
+Latency for percentile 51 : 1.138278
+Latency for percentile 52 : 1.156605
+Latency for percentile 53 : 1.174933
+Latency for percentile 54 : 1.193260
+Latency for percentile 55 : 1.211587
+Latency for percentile 56 : 1.229915
+Latency for percentile 57 : 1.248242
+Latency for percentile 58 : 1.266570
+Latency for percentile 59 : 1.284897
+Latency for percentile 60 : 1.303224
+Latency for percentile 61 : 1.321552
+Latency for percentile 62 : 1.339879
+Latency for percentile 63 : 1.358206
+Latency for percentile 64 : 1.376534
+Latency for percentile 65 : 1.394861
+Latency for percentile 66 : 1.413188
+Latency for percentile 67 : 1.431516
+Latency for percentile 68 : 1.449843
+Latency for percentile 69 : 1.468170
+Latency for percentile 70 : 1.486498
+Latency for percentile 71 : 1.504825
+Latency for percentile 72 : 1.523152
+Latency for percentile 73 : 1.541480
+Latency for percentile 74 : 1.559807
+Latency for percentile 75 : 1.578134
+Latency for percentile 76 : 1.596462
+Latency for percentile 77 : 1.614789
+Latency for percentile 78 : 1.633116
+Latency for percentile 79 : 1.651444
+Latency for percentile 80 : 1.669771
+Latency for percentile 81 : 1.688098
+Latency for percentile 82 : 1.706426
+Latency for percentile 83 : 1.724753
+Latency for percentile 84 : 1.743080
+Latency for percentile 85 : 1.761408
+Latency for percentile 86 : 1.779735
+Latency for percentile 87 : 1.798062
+Latency for percentile 88 : 1.816390
+Latency for percentile 89 : 1.834717
+Latency for percentile 90 : 1.853044
+Latency for percentile 91 : 1.871372
+Latency for percentile 92 : 1.889699
+Latency for percentile 93 : 1.908026
+Latency for percentile 94 : 1.926354
+Latency for percentile 95 : 1.944681
+Latency for percentile 96 : 1.963008
+Latency for percentile 97 : 1.981336
+Latency for percentile 98 : 1.999663
+Latency for percentile 99 : 79.892101
+Latency for percentile 100 : 14458.000000
+Latency for percentile 0 : 0.000000
+Latency for percentile 1 : 0.023544
+Latency for percentile 2 : 0.047088
+Latency for percentile 3 : 0.070632
+Latency for percentile 4 : 0.094176
+Latency for percentile 5 : 0.117720
+Latency for percentile 6 : 0.141264
+Latency for percentile 7 : 0.164808
+Latency for percentile 8 : 0.188352
+Latency for percentile 9 : 0.211896
+Latency for percentile 10 : 0.235440
+Latency for percentile 11 : 0.258984
+Latency for percentile 12 : 0.282528
+Latency for percentile 13 : 0.306072
+Latency for percentile 14 : 0.329616
+Latency for percentile 15 : 0.353160
+Latency for percentile 16 : 0.376704
+Latency for percentile 17 : 0.400248
+Latency for percentile 18 : 0.423792
+Latency for percentile 19 : 0.447336
+Latency for percentile 20 : 0.470880
+Latency for percentile 21 : 0.494423
+Latency for percentile 22 : 0.517967
+Latency for percentile 23 : 0.541511
+Latency for percentile 24 : 0.565055
+Latency for percentile 25 : 0.588599
+Latency for percentile 26 : 0.612143
+Latency for percentile 27 : 0.635687
+Latency for percentile 28 : 0.659231
+Latency for percentile 29 : 0.682775
+Latency for percentile 30 : 0.706319
+Latency for percentile 31 : 0.729863
+Latency for percentile 32 : 0.753407
+Latency for percentile 33 : 0.776951
+Latency for percentile 34 : 0.800495
+Latency for percentile 35 : 0.824039
+Latency for percentile 36 : 0.847583
+Latency for percentile 37 : 0.871127
+Latency for percentile 38 : 0.894671
+Latency for percentile 39 : 0.918215
+Latency for percentile 40 : 0.941759
+Latency for percentile 41 : 0.965303
+Latency for percentile 42 : 0.988847
+Latency for percentile 43 : 1.009619
+Latency for percentile 44 : 1.027895
+Latency for percentile 45 : 1.046172
+Latency for percentile 46 : 1.064448
+Latency for percentile 47 : 1.082725
+Latency for percentile 48 : 1.101001
+Latency for percentile 49 : 1.119277
+Latency for percentile 50 : 1.137554
+Latency for percentile 51 : 1.155830
+Latency for percentile 52 : 1.174107
+Latency for percentile 53 : 1.192383
+Latency for percentile 54 : 1.210660
+Latency for percentile 55 : 1.228936
+Latency for percentile 56 : 1.247213
+Latency for percentile 57 : 1.265489
+Latency for percentile 58 : 1.283765
+Latency for percentile 59 : 1.302042
+Latency for percentile 60 : 1.320318
+Latency for percentile 61 : 1.338595
+Latency for percentile 62 : 1.356871
+Latency for percentile 63 : 1.375148
+Latency for percentile 64 : 1.393424
+Latency for percentile 65 : 1.411701
+Latency for percentile 66 : 1.429977
+Latency for percentile 67 : 1.448254
+Latency for percentile 68 : 1.466530
+Latency for percentile 69 : 1.484806
+Latency for percentile 70 : 1.503083
+Latency for percentile 71 : 1.521359
+Latency for percentile 72 : 1.539636
+Latency for percentile 73 : 1.557912
+Latency for percentile 74 : 1.576189
+Latency for percentile 75 : 1.594465
+Latency for percentile 76 : 1.612742
+Latency for percentile 77 : 1.631018
+Latency for percentile 78 : 1.649295
+Latency for percentile 79 : 1.667571
+Latency for percentile 80 : 1.685847
+Latency for percentile 81 : 1.704124
+Latency for percentile 82 : 1.722400
+Latency for percentile 83 : 1.740677
+Latency for percentile 84 : 1.758953
+Latency for percentile 85 : 1.777230
+Latency for percentile 86 : 1.795506
+Latency for percentile 87 : 1.813783
+Latency for percentile 88 : 1.832059
+Latency for percentile 89 : 1.850335
+Latency for percentile 90 : 1.868612
+Latency for percentile 91 : 1.886888
+Latency for percentile 92 : 1.905165
+Latency for percentile 93 : 1.923441
+Latency for percentile 94 : 1.941718
+Latency for percentile 95 : 1.959994
+Latency for percentile 96 : 1.978271
+Latency for percentile 97 : 1.996547
+Latency for percentile 98 : 58.435812
+Latency for percentile 99 : 91.191553
+Latency for percentile 100 : 17441.000000
+Latency for percentile 0 : 0.000000
+Latency for percentile 1 : 0.022898
+Latency for percentile 2 : 0.045795
+Latency for percentile 3 : 0.068693
+Latency for percentile 4 : 0.091590
+Latency for percentile 5 : 0.114488
+Latency for percentile 6 : 0.137386
+Latency for percentile 7 : 0.160283
+Latency for percentile 8 : 0.183181
+Latency for percentile 9 : 0.206078
+Latency for percentile 10 : 0.228976
+Latency for percentile 11 : 0.251874
+Latency for percentile 12 : 0.274771
+Latency for percentile 13 : 0.297669
+Latency for percentile 14 : 0.320566
+Latency for percentile 15 : 0.343464
+Latency for percentile 16 : 0.366361
+Latency for percentile 17 : 0.389259
+Latency for percentile 18 : 0.412157
+Latency for percentile 19 : 0.435054
+Latency for percentile 20 : 0.457952
+Latency for percentile 21 : 0.480849
+Latency for percentile 22 : 0.503747
+Latency for percentile 23 : 0.526645
+Latency for percentile 24 : 0.549542
+Latency for percentile 25 : 0.572440
+Latency for percentile 26 : 0.595337
+Latency for percentile 27 : 0.618235
+Latency for percentile 28 : 0.641133
+Latency for percentile 29 : 0.664030
+Latency for percentile 30 : 0.686928
+Latency for percentile 31 : 0.709825
+Latency for percentile 32 : 0.732723
+Latency for percentile 33 : 0.755621
+Latency for percentile 34 : 0.778518
+Latency for percentile 35 : 0.801416
+Latency for percentile 36 : 0.824313
+Latency for percentile 37 : 0.847211
+Latency for percentile 38 : 0.870108
+Latency for percentile 39 : 0.893006
+Latency for percentile 40 : 0.915904
+Latency for percentile 41 : 0.938801
+Latency for percentile 42 : 0.961699
+Latency for percentile 43 : 0.984596
+Latency for percentile 44 : 1.006110
+Latency for percentile 45 : 1.024780
+Latency for percentile 46 : 1.043450
+Latency for percentile 47 : 1.062119
+Latency for percentile 48 : 1.080789
+Latency for percentile 49 : 1.099459
+Latency for percentile 50 : 1.118128
+Latency for percentile 51 : 1.136798
+Latency for percentile 52 : 1.155468
+Latency for percentile 53 : 1.174137
+Latency for percentile 54 : 1.192807
+Latency for percentile 55 : 1.211477
+Latency for percentile 56 : 1.230146
+Latency for percentile 57 : 1.248816
+Latency for percentile 58 : 1.267486
+Latency for percentile 59 : 1.286156
+Latency for percentile 60 : 1.304825
+Latency for percentile 61 : 1.323495
+Latency for percentile 62 : 1.342165
+Latency for percentile 63 : 1.360834
+Latency for percentile 64 : 1.379504
+Latency for percentile 65 : 1.398174
+Latency for percentile 66 : 1.416843
+Latency for percentile 67 : 1.435513
+Latency for percentile 68 : 1.454183
+Latency for percentile 69 : 1.472852
+Latency for percentile 70 : 1.491522
+Latency for percentile 71 : 1.510192
+Latency for percentile 72 : 1.528861
+Latency for percentile 73 : 1.547531
+Latency for percentile 74 : 1.566201
+Latency for percentile 75 : 1.584870
+Latency for percentile 76 : 1.603540
+Latency for percentile 77 : 1.622210
+Latency for percentile 78 : 1.640880
+Latency for percentile 79 : 1.659549
+Latency for percentile 80 : 1.678219
+Latency for percentile 81 : 1.696889
+Latency for percentile 82 : 1.715558
+Latency for percentile 83 : 1.734228
+Latency for percentile 84 : 1.752898
+Latency for percentile 85 : 1.771567
+Latency for percentile 86 : 1.790237
+Latency for percentile 87 : 1.808907
+Latency for percentile 88 : 1.827576
+Latency for percentile 89 : 1.846246
+Latency for percentile 90 : 1.864916
+Latency for percentile 91 : 1.883585
+Latency for percentile 92 : 1.902255
+Latency for percentile 93 : 1.920925
+Latency for percentile 94 : 1.939594
+Latency for percentile 95 : 1.958264
+Latency for percentile 96 : 1.976934
+Latency for percentile 97 : 1.995604
+Latency for percentile 98 : 52.767645
+Latency for percentile 99 : 89.916328
+Latency for percentile 100 : 8980.000000
+Latency for percentile 0 : 0.000000
+Latency for percentile 1 : 0.024834
+Latency for percentile 2 : 0.049669
+Latency for percentile 3 : 0.074503
+Latency for percentile 4 : 0.099338
+Latency for percentile 5 : 0.124172
+Latency for percentile 6 : 0.149007
+Latency for percentile 7 : 0.173841
+Latency for percentile 8 : 0.198676
+Latency for percentile 9 : 0.223510
+Latency for percentile 10 : 0.248345
+Latency for percentile 11 : 0.273179
+Latency for percentile 12 : 0.298014
+Latency for percentile 13 : 0.322848
+Latency for percentile 14 : 0.347683
+Latency for percentile 15 : 0.372517
+Latency for percentile 16 : 0.397352
+Latency for percentile 17 : 0.422186
+Latency for percentile 18 : 0.447021
+Latency for percentile 19 : 0.471855
+Latency for percentile 20 : 0.496690
+Latency for percentile 21 : 0.521524
+Latency for percentile 22 : 0.546359
+Latency for percentile 23 : 0.571193
+Latency for percentile 24 : 0.596028
+Latency for percentile 25 : 0.620862
+Latency for percentile 26 : 0.645697
+Latency for percentile 27 : 0.670531
+Latency for percentile 28 : 0.695366
+Latency for percentile 29 : 0.720200
+Latency for percentile 30 : 0.745035
+Latency for percentile 31 : 0.769869
+Latency for percentile 32 : 0.794704
+Latency for percentile 33 : 0.819538
+Latency for percentile 34 : 0.844372
+Latency for percentile 35 : 0.869207
+Latency for percentile 36 : 0.894041
+Latency for percentile 37 : 0.918876
+Latency for percentile 38 : 0.943710
+Latency for percentile 39 : 0.968545
+Latency for percentile 40 : 0.993379
+Latency for percentile 41 : 1.013441
+Latency for percentile 42 : 1.031767
+Latency for percentile 43 : 1.050094
+Latency for percentile 44 : 1.068420
+Latency for percentile 45 : 1.086747
+Latency for percentile 46 : 1.105073
+Latency for percentile 47 : 1.123400
+Latency for percentile 48 : 1.141726
+Latency for percentile 49 : 1.160053
+Latency for percentile 50 : 1.178379
+Latency for percentile 51 : 1.196705
+Latency for percentile 52 : 1.215032
+Latency for percentile 53 : 1.233358
+Latency for percentile 54 : 1.251685
+Latency for percentile 55 : 1.270011
+Latency for percentile 56 : 1.288338
+Latency for percentile 57 : 1.306664
+Latency for percentile 58 : 1.324991
+Latency for percentile 59 : 1.343317
+Latency for percentile 60 : 1.361644
+Latency for percentile 61 : 1.379970
+Latency for percentile 62 : 1.398297
+Latency for percentile 63 : 1.416623
+Latency for percentile 64 : 1.434949
+Latency for percentile 65 : 1.453276
+Latency for percentile 66 : 1.471602
+Latency for percentile 67 : 1.489929
+Latency for percentile 68 : 1.508255
+Latency for percentile 69 : 1.526582
+Latency for percentile 70 : 1.544908
+Latency for percentile 71 : 1.563235
+Latency for percentile 72 : 1.581561
+Latency for percentile 73 : 1.599888
+Latency for percentile 74 : 1.618214
+Latency for percentile 75 : 1.636541
+Latency for percentile 76 : 1.654867
+Latency for percentile 77 : 1.673193
+Latency for percentile 78 : 1.691520
+Latency for percentile 79 : 1.709846
+Latency for percentile 80 : 1.728173
+Latency for percentile 81 : 1.746499
+Latency for percentile 82 : 1.764826
+Latency for percentile 83 : 1.783152
+Latency for percentile 84 : 1.801479
+Latency for percentile 85 : 1.819805
+Latency for percentile 86 : 1.838132
+Latency for percentile 87 : 1.856458
+Latency for percentile 88 : 1.874785
+Latency for percentile 89 : 1.893111
+Latency for percentile 90 : 1.911437
+Latency for percentile 91 : 1.929764
+Latency for percentile 92 : 1.948090
+Latency for percentile 93 : 1.966417
+Latency for percentile 94 : 1.984743
+Latency for percentile 95 : 2.263544
+Latency for percentile 96 : 56.898824
+Latency for percentile 97 : 79.259701
+Latency for percentile 98 : 90.909461
+Latency for percentile 99 : 102.559222
+Latency for percentile 100 : 17466.000000
+Latency for percentile 0 : 1.000000
+Latency for percentile 1 : 1.000000
+Latency for percentile 2 : 1.000000
+Latency for percentile 3 : 1.000000
+Latency for percentile 4 : 1.000000
+Latency for percentile 5 : 1.000000
+Latency for percentile 6 : 1.000000
+Latency for percentile 7 : 1.000000
+Latency for percentile 8 : 1.000000
+Latency for percentile 9 : 1.000000
+Latency for percentile 10 : 1.000000
+Latency for percentile 11 : 1.000000
+Latency for percentile 12 : 1.000000
+Latency for percentile 13 : 1.000000
+Latency for percentile 14 : 1.000000
+Latency for percentile 15 : 1.000000
+Latency for percentile 16 : 1.000000
+Latency for percentile 17 : 1.000000
+Latency for percentile 18 : 1.000000
+Latency for percentile 19 : 1.000000
+Latency for percentile 20 : 1.000000
+Latency for percentile 21 : 1.000000
+Latency for percentile 22 : 1.000000
+Latency for percentile 23 : 1.000000
+Latency for percentile 24 : 1.000000
+Latency for percentile 25 : 1.000000
+Latency for percentile 26 : 1.000000
+Latency for percentile 27 : 1.012387
+Latency for percentile 28 : 1.031100
+Latency for percentile 29 : 1.049812
+Latency for percentile 30 : 1.068524
+Latency for percentile 31 : 1.087237
+Latency for percentile 32 : 1.105949
+Latency for percentile 33 : 1.124661
+Latency for percentile 34 : 1.143373
+Latency for percentile 35 : 1.162086
+Latency for percentile 36 : 1.180798
+Latency for percentile 37 : 1.199510
+Latency for percentile 38 : 1.218223
+Latency for percentile 39 : 1.236935
+Latency for percentile 40 : 1.255647
+Latency for percentile 41 : 1.274360
+Latency for percentile 42 : 1.293072
+Latency for percentile 43 : 1.311784
+Latency for percentile 44 : 1.330496
+Latency for percentile 45 : 1.349209
+Latency for percentile 46 : 1.367921
+Latency for percentile 47 : 1.386633
+Latency for percentile 48 : 1.405346
+Latency for percentile 49 : 1.424058
+Latency for percentile 50 : 1.442770
+Latency for percentile 51 : 1.461483
+Latency for percentile 52 : 1.480195
+Latency for percentile 53 : 1.498907
+Latency for percentile 54 : 1.517620
+Latency for percentile 55 : 1.536332
+Latency for percentile 56 : 1.555044
+Latency for percentile 57 : 1.573756
+Latency for percentile 58 : 1.592469
+Latency for percentile 59 : 1.611181
+Latency for percentile 60 : 1.629893
+Latency for percentile 61 : 1.648606
+Latency for percentile 62 : 1.667318
+Latency for percentile 63 : 1.686030
+Latency for percentile 64 : 1.704743
+Latency for percentile 65 : 1.723455
+Latency for percentile 66 : 1.742167
+Latency for percentile 67 : 1.760879
+Latency for percentile 68 : 1.779592
+Latency for percentile 69 : 1.798304
+Latency for percentile 70 : 1.817016
+Latency for percentile 71 : 1.835729
+Latency for percentile 72 : 1.854441
+Latency for percentile 73 : 1.873153
+Latency for percentile 74 : 1.891866
+Latency for percentile 75 : 1.910578
+Latency for percentile 76 : 1.929290
+Latency for percentile 77 : 1.948002
+Latency for percentile 78 : 1.966715
+Latency for percentile 79 : 1.985427
+Latency for percentile 80 : 2.094987
+Latency for percentile 81 : 2.524385
+Latency for percentile 82 : 2.953783
+Latency for percentile 83 : 4.773004
+Latency for percentile 84 : 57.549452
+Latency for percentile 85 : 67.508690
+Latency for percentile 86 : 76.415338
+Latency for percentile 87 : 79.233222
+Latency for percentile 88 : 82.051106
+Latency for percentile 89 : 84.868989
+Latency for percentile 90 : 87.686873
+Latency for percentile 91 : 90.504757
+Latency for percentile 92 : 93.322641
+Latency for percentile 93 : 96.140525
+Latency for percentile 94 : 98.958408
+Latency for percentile 95 : 101.776292
+Latency for percentile 96 : 104.594176
+Latency for percentile 97 : 107.412060
+Latency for percentile 98 : 112.376417
+Latency for percentile 99 : 141.498648
+Latency for percentile 100 : 24356.000000
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop Rblob(GB) Wblob(GB)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      6/0   207.97 MB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0       0.0       0.0
+  L1      3/0   169.19 MB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0       0.0       0.0
+  L2      5/0   265.88 MB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0       0.0       0.0
+  L3      6/0   328.40 MB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0       0.0       0.0
+  L4      4/0   234.06 MB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0       0.0       0.0
+  L5      7/0   389.86 MB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0       0.0       0.0
+  L6     16/0   990.03 MB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0       0.0       0.0
+ Sum     47/0    2.52 GB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0       0.0       0.0
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0       0.0       0.0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop Rblob(GB) Wblob(GB)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Blob file count: 0, total size: 0.0 GB
+
+Uptime(secs): 339.8 total, 339.8 interval
+Flush(GB): cumulative 0.000, interval 0.000
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Interval compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+Block cache LRUCache@0x562948d65930 capacity: 64.00 MB collections: 1 last_copies: 0 last_secs: 0.002595 secs_since: 0
+Block cache entry stats(count,size,portion): DataBlock(14656,62.62 MB,97.8377%) Misc(1,0.00 KB,0%)
+
+** File Read Latency Histogram By Level [default] **
+** Level 0 read latency histogram (micros):
+Count: 25551830 Average: 1.6007  StdDev: 6.93
+Min: 0  Median: 1.0359  Max: 18410
+Percentiles: P50: 1.04 P75: 1.52 P99: 1.99 P99.1: 2.00 P99.2: 2.00 P99.3: 2.00 P99.4: 2.19 P99.5: 2.39 P99.6: 2.60 P99.7: 2.80 P99.8: 3.07 P99.9: 10.67 P99.91: 12.93 P99.92: 15.91 P99.93: 55.11 P99.94: 75.74 P99.95: 82.49 P99.96: 89.07 P99.97: 95.65 P99.98: 102.23 P99.99: 108.81 P100: 18410.00
+------------------------------------------------------
+[       0,       1 ] 12307065  48.165%  48.165% ##########
+(       1,       2 ] 13067522  51.141%  99.306% ##########
+(       2,       3 ]   125430   0.491%  99.797% 
+(       3,       4 ]    10180   0.040%  99.837% 
+(       4,       6 ]     3157   0.012%  99.849% 
+(       6,      10 ]    12173   0.048%  99.897% 
+(      10,      15 ]     5638   0.022%  99.919% 
+(      15,      22 ]     1723   0.007%  99.926% 
+(      22,      34 ]      496   0.002%  99.928% 
+(      34,      51 ]       50   0.000%  99.928% 
+(      51,      76 ]     3097   0.012%  99.940% 
+(      76,     110 ]    13208   0.052%  99.992% 
+(     110,     170 ]     2062   0.008% 100.000% 
+(     170,     250 ]        8   0.000% 100.000% 
+(     250,     380 ]        4   0.000% 100.000% 
+(     380,     580 ]        3   0.000% 100.000% 
+(     580,     870 ]        1   0.000% 100.000% 
+(    1300,    1900 ]        1   0.000% 100.000% 
+(    4400,    6600 ]        6   0.000% 100.000% 
+(    6600,    9900 ]        2   0.000% 100.000% 
+(    9900,   14000 ]        3   0.000% 100.000% 
+(   14000,   22000 ]        1   0.000% 100.000% 
+
+** Level 1 read latency histogram (micros):
+Count: 4187024 Average: 2.3160  StdDev: 13.89
+Min: 0  Median: 1.1415  Max: 17808
+Percentiles: P50: 1.14 P75: 1.58 P99: 2.85 P99.1: 3.83 P99.2: 15.97 P99.3: 66.23 P99.4: 78.48 P99.5: 84.53 P99.6: 90.58 P99.7: 96.62 P99.8: 102.67 P99.9: 108.71 P99.91: 109.32 P99.92: 109.92 P99.93: 116.68 P99.94: 124.37 P99.95: 132.06 P99.96: 139.75 P99.97: 147.43 P99.98: 155.12 P99.99: 162.81 P100: 17808.00
+------------------------------------------------------
+[       0,       1 ]  1757997  41.987%  41.987% ########
+(       1,       2 ]  2371470  56.639%  98.625% ###########
+(       2,       3 ]    18471   0.441%  99.066% 
+(       3,       4 ]     1695   0.040%  99.107% 
+(       4,       6 ]      897   0.021%  99.128% 
+(       6,      10 ]     1999   0.048%  99.176% 
+(      10,      15 ]      961   0.023%  99.199% 
+(      15,      22 ]      274   0.007%  99.206% 
+(      22,      34 ]      100   0.002%  99.208% 
+(      34,      51 ]        7   0.000%  99.208% 
+(      51,      76 ]     6310   0.151%  99.359% 
+(      76,     110 ]    23548   0.562%  99.921% 
+(     110,     170 ]     3268   0.078%  99.999% 
+(     170,     250 ]       12   0.000% 100.000% 
+(     250,     380 ]        1   0.000% 100.000% 
+(     380,     580 ]        4   0.000% 100.000% 
+(     580,     870 ]        3   0.000% 100.000% 
+(     870,    1300 ]        1   0.000% 100.000% 
+(    1300,    1900 ]        2   0.000% 100.000% 
+(    4400,    6600 ]        2   0.000% 100.000% 
+(    9900,   14000 ]        1   0.000% 100.000% 
+(   14000,   22000 ]        1   0.000% 100.000% 
+
+** Level 2 read latency histogram (micros):
+Count: 3703794 Average: 2.8456  StdDev: 16.03
+Min: 0  Median: 1.1200  Max: 14458
+Percentiles: P50: 1.12 P75: 1.58 P99: 79.89 P99.1: 83.35 P99.2: 86.82 P99.3: 90.28 P99.4: 93.74 P99.5: 97.21 P99.6: 100.67 P99.7: 104.13 P99.8: 107.59 P99.9: 124.12 P99.91: 128.75 P99.92: 133.37 P99.93: 138.00 P99.94: 142.63 P99.95: 147.25 P99.96: 151.88 P99.97: 156.51 P99.98: 161.13 P99.99: 165.76 P100: 14458.00
+------------------------------------------------------
+[       0,       1 ]  1609487  43.455%  43.455% #########
+(       1,       2 ]  2020912  54.563%  98.018% ###########
+(       2,       3 ]    15219   0.411%  98.429% 
+(       3,       4 ]     2108   0.057%  98.486% 
+(       4,       6 ]     1087   0.029%  98.516% 
+(       6,      10 ]     1808   0.049%  98.564% 
+(      10,      15 ]      821   0.022%  98.587% 
+(      15,      22 ]      267   0.007%  98.594% 
+(      22,      34 ]       71   0.002%  98.596% 
+(      34,      51 ]        6   0.000%  98.596% 
+(      51,      76 ]    10807   0.292%  98.888% 
+(      76,     110 ]    36367   0.982%  99.869% 
+(     110,     170 ]     4803   0.130%  99.999% 
+(     170,     250 ]       12   0.000%  99.999% 
+(     250,     380 ]        3   0.000% 100.000% 
+(     380,     580 ]        1   0.000% 100.000% 
+(     580,     870 ]        4   0.000% 100.000% 
+(     870,    1300 ]        4   0.000% 100.000% 
+(    1300,    1900 ]        1   0.000% 100.000% 
+(    2900,    4400 ]        1   0.000% 100.000% 
+(    4400,    6600 ]        2   0.000% 100.000% 
+(    9900,   14000 ]        2   0.000% 100.000% 
+(   14000,   22000 ]        1   0.000% 100.000% 
+
+** Level 3 read latency histogram (micros):
+Count: 3000562 Average: 3.5072  StdDev: 18.10
+Min: 0  Median: 1.1376  Max: 17441
+Percentiles: P50: 1.14 P75: 1.59 P99: 91.19 P99.1: 93.50 P99.2: 95.81 P99.3: 98.12 P99.4: 100.43 P99.5: 102.74 P99.6: 105.05 P99.7: 107.36 P99.8: 109.67 P99.9: 137.82 P99.91: 141.06 P99.92: 144.31 P99.93: 147.55 P99.94: 150.80 P99.95: 154.04 P99.96: 157.28 P99.97: 160.53 P99.98: 163.77 P99.99: 167.02 P100: 17441.00
+------------------------------------------------------
+[       0,       1 ]  1274450  42.474%  42.474% ########
+(       1,       2 ]  1641764  54.715%  97.189% ###########
+(       2,       3 ]    13729   0.458%  97.646% 
+(       3,       4 ]     2687   0.090%  97.736% 
+(       4,       6 ]     1101   0.037%  97.773% 
+(       6,      10 ]     1494   0.050%  97.823% 
+(      10,      15 ]      704   0.023%  97.846% 
+(      15,      22 ]      203   0.007%  97.853% 
+(      22,      34 ]       65   0.002%  97.855% 
+(      34,      51 ]        5   0.000%  97.855% 
+(      51,      76 ]    14621   0.487%  98.342% 
+(      76,     110 ]    44165   1.472%  99.814% 
+(     110,     170 ]     5550   0.185%  99.999% 
+(     170,     250 ]        7   0.000%  99.999% 
+(     250,     380 ]        7   0.000% 100.000% 
+(     380,     580 ]        2   0.000% 100.000% 
+(     870,    1300 ]        3   0.000% 100.000% 
+(    1900,    2900 ]        1   0.000% 100.000% 
+(    2900,    4400 ]        1   0.000% 100.000% 
+(    4400,    6600 ]        1   0.000% 100.000% 
+(    9900,   14000 ]        1   0.000% 100.000% 
+(   14000,   22000 ]        1   0.000% 100.000% 
+
+** Level 4 read latency histogram (micros):
+Count: 2249583 Average: 3.3887  StdDev: 15.15
+Min: 0  Median: 1.1181  Max: 8980
+Percentiles: P50: 1.12 P75: 1.58 P99: 89.92 P99.1: 92.37 P99.2: 94.83 P99.3: 97.29 P99.4: 99.75 P99.5: 102.20 P99.6: 104.66 P99.7: 107.12 P99.8: 109.58 P99.9: 137.34 P99.91: 140.64 P99.92: 143.95 P99.93: 147.25 P99.94: 150.56 P99.95: 153.86 P99.96: 157.17 P99.97: 160.47 P99.98: 163.77 P99.99: 167.08 P100: 8980.00
+------------------------------------------------------
+[       0,       1 ]   982454  43.673%  43.673% #########
+(       1,       2 ]  1204939  53.563%  97.235% ###########
+(       2,       3 ]    11814   0.525%  97.761% 
+(       3,       4 ]     1945   0.086%  97.847% 
+(       4,       6 ]      831   0.037%  97.884% 
+(       6,      10 ]     1148   0.051%  97.935% 
+(      10,      15 ]      522   0.023%  97.958% 
+(      15,      22 ]      146   0.006%  97.965% 
+(      22,      34 ]       41   0.002%  97.967% 
+(      34,      51 ]        9   0.000%  97.967% 
+(      51,      76 ]    10499   0.467%  98.434% 
+(      76,     110 ]    31124   1.384%  99.817% 
+(     110,     170 ]     4085   0.182%  99.999% 
+(     170,     250 ]       12   0.001%  99.999% 
+(     250,     380 ]        5   0.000% 100.000% 
+(     380,     580 ]        4   0.000% 100.000% 
+(     580,     870 ]        1   0.000% 100.000% 
+(     870,    1300 ]        1   0.000% 100.000% 
+(    4400,    6600 ]        2   0.000% 100.000% 
+(    6600,    9900 ]        1   0.000% 100.000% 
+
+** Level 5 read latency histogram (micros):
+Count: 1803520 Average: 5.4121  StdDev: 25.95
+Min: 0  Median: 1.1784  Max: 17466
+Percentiles: P50: 1.18 P75: 1.64 P99: 102.56 P99.1: 103.72 P99.2: 104.89 P99.3: 106.05 P99.4: 107.22 P99.5: 108.38 P99.6: 109.55 P99.7: 120.24 P99.8: 136.94 P99.9: 153.65 P99.91: 155.32 P99.92: 156.99 P99.93: 158.66 P99.94: 160.33 P99.95: 162.00 P99.96: 163.67 P99.97: 165.34 P99.98: 167.01 P99.99: 168.68 P100: 17466.00
+------------------------------------------------------
+[       0,       1 ]   726216  40.267%  40.267% ########
+(       1,       2 ]   984107  54.566%  94.832% ###########
+(       2,       3 ]    11463   0.636%  95.468% 
+(       3,       4 ]     3192   0.177%  95.645% 
+(       4,       6 ]     1014   0.056%  95.701% 
+(       6,      10 ]      824   0.046%  95.747% 
+(      10,      15 ]      399   0.022%  95.769% 
+(      15,      22 ]      110   0.006%  95.775% 
+(      22,      34 ]       35   0.002%  95.777% 
+(      34,      51 ]        8   0.000%  95.778% 
+(      51,      76 ]    17000   0.943%  96.720% 
+(      76,     110 ]    52636   2.919%  99.639% #
+(     110,     170 ]     6478   0.359%  99.998% 
+(     170,     250 ]       13   0.001%  99.999% 
+(     250,     380 ]        3   0.000%  99.999% 
+(     380,     580 ]        2   0.000%  99.999% 
+(     580,     870 ]        1   0.000%  99.999% 
+(     870,    1300 ]        5   0.000%  99.999% 
+(    1300,    1900 ]       10   0.001% 100.000% 
+(    4400,    6600 ]        2   0.000% 100.000% 
+(   14000,   22000 ]        2   0.000% 100.000% 
+
+** Level 6 read latency histogram (micros):
+Count: 1163239 Average: 17.5523  StdDev: 48.73
+Min: 1  Median: 1.4428  Max: 24356
+Percentiles: P50: 1.44 P75: 1.91 P99: 141.50 P99.1: 144.41 P99.2: 147.32 P99.3: 150.24 P99.4: 153.15 P99.5: 156.06 P99.6: 158.97 P99.7: 161.88 P99.8: 164.80 P99.9: 167.71 P99.91: 168.00 P99.92: 168.29 P99.93: 168.58 P99.94: 168.87 P99.95: 169.16 P99.96: 169.46 P99.97: 169.75 P99.98: 182.04 P99.99: 1348.65 P100: 24356.00
+------------------------------------------------------
+[       0,       1 ]   306374  26.338%  26.338% #####
+(       1,       2 ]   621644  53.441%  79.779% ###########
+(       2,       3 ]    27090   2.329%  82.108% 
+(       3,       4 ]     8587   0.738%  82.846% 
+(       4,       6 ]     4640   0.399%  83.245% 
+(       6,      10 ]      699   0.060%  83.305% 
+(      10,      15 ]      344   0.030%  83.334% 
+(      15,      22 ]       76   0.007%  83.341% 
+(      22,      34 ]       12   0.001%  83.342% 
+(      34,      51 ]        5   0.000%  83.342% 
+(      51,      76 ]    29200   2.510%  85.853% #
+(      76,     110 ]   140354  12.066%  97.918% ##
+(     110,     170 ]    23966   2.060%  99.979% 
+(     170,     250 ]      102   0.009%  99.987% 
+(     250,     380 ]        6   0.001%  99.988% 
+(     380,     580 ]        1   0.000%  99.988% 
+(     580,     870 ]        5   0.000%  99.988% 
+(     870,    1300 ]        9   0.001%  99.989% 
+(    1300,    1900 ]      107   0.009%  99.998% 
+(    1900,    2900 ]       11   0.001%  99.999% 
+(    2900,    4400 ]        3   0.000% 100.000% 
+(    4400,    6600 ]        1   0.000% 100.000% 
+(    6600,    9900 ]        1   0.000% 100.000% 
+(    9900,   14000 ]        1   0.000% 100.000% 
+(   22000,   33000 ]        1   0.000% 100.000% 
+
+
+** DB Stats **
+Uptime(secs): 339.8 total, 339.8 interval
+Cumulative writes: 0 writes, 0 keys, 0 commit groups, 0.0 writes per commit group, ingest: 0.00 GB, 0.00 MB/s
+Cumulative WAL: 0 writes, 0 syncs, 0.00 writes per sync, written: 0.00 GB, 0.00 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 0 writes, 0 keys, 0 commit groups, 0.0 writes per commit group, ingest: 0.00 MB, 0.00 MB/s
+Interval WAL: 0 writes, 0 syncs, 0.00 writes per sync, written: 0.00 GB, 0.00 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+STATISTICS:
+rocksdb.block.cache.miss COUNT : 41659364
+rocksdb.block.cache.hit COUNT : 4175691
+rocksdb.block.cache.add COUNT : 41659364
+rocksdb.block.cache.add.failures COUNT : 0
+rocksdb.block.cache.index.miss COUNT : 0
+rocksdb.block.cache.index.hit COUNT : 0
+rocksdb.block.cache.index.add COUNT : 0
+rocksdb.block.cache.index.bytes.insert COUNT : 0
+rocksdb.block.cache.index.bytes.evict COUNT : 0
+rocksdb.block.cache.filter.miss COUNT : 0
+rocksdb.block.cache.filter.hit COUNT : 0
+rocksdb.block.cache.filter.add COUNT : 0
+rocksdb.block.cache.filter.bytes.insert COUNT : 0
+rocksdb.block.cache.filter.bytes.evict COUNT : 0
+rocksdb.block.cache.data.miss COUNT : 41659364
+rocksdb.block.cache.data.hit COUNT : 4175691
+rocksdb.block.cache.data.add COUNT : 41659364
+rocksdb.block.cache.data.bytes.insert COUNT : 186632447616
+rocksdb.block.cache.bytes.read COUNT : 18707016224
+rocksdb.block.cache.bytes.write COUNT : 186632447616
+rocksdb.bloom.filter.useful COUNT : 0
+rocksdb.bloom.filter.full.positive COUNT : 0
+rocksdb.bloom.filter.full.true.positive COUNT : 0
+rocksdb.bloom.filter.micros COUNT : 0
+rocksdb.persistent.cache.hit COUNT : 0
+rocksdb.persistent.cache.miss COUNT : 0
+rocksdb.sim.block.cache.hit COUNT : 0
+rocksdb.sim.block.cache.miss COUNT : 0
+rocksdb.memtable.hit COUNT : 103863
+rocksdb.memtable.miss COUNT : 4896137
+rocksdb.l0.hit COUNT : 667392
+rocksdb.l1.hit COUNT : 504180
+rocksdb.l2andup.hit COUNT : 3724565
+rocksdb.compaction.key.drop.new COUNT : 0
+rocksdb.compaction.key.drop.obsolete COUNT : 0
+rocksdb.compaction.key.drop.range_del COUNT : 0
+rocksdb.compaction.key.drop.user COUNT : 0
+rocksdb.compaction.range_del.drop.obsolete COUNT : 0
+rocksdb.compaction.optimized.del.drop.obsolete COUNT : 0
+rocksdb.compaction.cancelled COUNT : 0
+rocksdb.number.keys.written COUNT : 0
+rocksdb.number.keys.read COUNT : 5000000
+rocksdb.number.keys.updated COUNT : 0
+rocksdb.bytes.written COUNT : 0
+rocksdb.bytes.read COUNT : 5120000000
+rocksdb.number.db.seek COUNT : 0
+rocksdb.number.db.next COUNT : 0
+rocksdb.number.db.prev COUNT : 0
+rocksdb.number.db.seek.found COUNT : 0
+rocksdb.number.db.next.found COUNT : 0
+rocksdb.number.db.prev.found COUNT : 0
+rocksdb.db.iter.bytes.read COUNT : 0
+rocksdb.no.file.closes COUNT : 0
+rocksdb.no.file.opens COUNT : 94
+rocksdb.no.file.errors COUNT : 0
+rocksdb.l0.slowdown.micros COUNT : 0
+rocksdb.memtable.compaction.micros COUNT : 0
+rocksdb.l0.num.files.stall.micros COUNT : 0
+rocksdb.stall.micros COUNT : 0
+rocksdb.db.mutex.wait.micros COUNT : 0
+rocksdb.rate.limit.delay.millis COUNT : 0
+rocksdb.num.iterators COUNT : 0
+rocksdb.number.multiget.get COUNT : 0
+rocksdb.number.multiget.keys.read COUNT : 0
+rocksdb.number.multiget.bytes.read COUNT : 0
+rocksdb.number.deletes.filtered COUNT : 0
+rocksdb.number.merge.failures COUNT : 0
+rocksdb.bloom.filter.prefix.checked COUNT : 0
+rocksdb.bloom.filter.prefix.useful COUNT : 0
+rocksdb.number.reseeks.iteration COUNT : 0
+rocksdb.getupdatessince.calls COUNT : 0
+rocksdb.block.cachecompressed.miss COUNT : 0
+rocksdb.block.cachecompressed.hit COUNT : 0
+rocksdb.block.cachecompressed.add COUNT : 0
+rocksdb.block.cachecompressed.add.failures COUNT : 0
+rocksdb.wal.synced COUNT : 0
+rocksdb.wal.bytes COUNT : 0
+rocksdb.write.self COUNT : 0
+rocksdb.write.other COUNT : 0
+rocksdb.write.timeout COUNT : 0
+rocksdb.write.wal COUNT : 0
+rocksdb.compact.read.bytes COUNT : 0
+rocksdb.compact.write.bytes COUNT : 0
+rocksdb.flush.write.bytes COUNT : 0
+rocksdb.compact.read.marked.bytes COUNT : 0
+rocksdb.compact.read.periodic.bytes COUNT : 0
+rocksdb.compact.read.ttl.bytes COUNT : 0
+rocksdb.compact.write.marked.bytes COUNT : 0
+rocksdb.compact.write.periodic.bytes COUNT : 0
+rocksdb.compact.write.ttl.bytes COUNT : 0
+rocksdb.number.direct.load.table.properties COUNT : 0
+rocksdb.number.superversion_acquires COUNT : 1
+rocksdb.number.superversion_releases COUNT : 0
+rocksdb.number.superversion_cleanups COUNT : 0
+rocksdb.number.block.compressed COUNT : 0
+rocksdb.number.block.decompressed COUNT : 41659458
+rocksdb.number.block.not_compressed COUNT : 0
+rocksdb.merge.operation.time.nanos COUNT : 0
+rocksdb.filter.operation.time.nanos COUNT : 0
+rocksdb.row.cache.hit COUNT : 0
+rocksdb.row.cache.miss COUNT : 0
+rocksdb.read.amp.estimate.useful.bytes COUNT : 0
+rocksdb.read.amp.total.read.bytes COUNT : 0
+rocksdb.number.rate_limiter.drains COUNT : 0
+rocksdb.number.iter.skip COUNT : 0
+rocksdb.blobdb.num.put COUNT : 0
+rocksdb.blobdb.num.write COUNT : 0
+rocksdb.blobdb.num.get COUNT : 0
+rocksdb.blobdb.num.multiget COUNT : 0
+rocksdb.blobdb.num.seek COUNT : 0
+rocksdb.blobdb.num.next COUNT : 0
+rocksdb.blobdb.num.prev COUNT : 0
+rocksdb.blobdb.num.keys.written COUNT : 0
+rocksdb.blobdb.num.keys.read COUNT : 0
+rocksdb.blobdb.bytes.written COUNT : 0
+rocksdb.blobdb.bytes.read COUNT : 0
+rocksdb.blobdb.write.inlined COUNT : 0
+rocksdb.blobdb.write.inlined.ttl COUNT : 0
+rocksdb.blobdb.write.blob COUNT : 0
+rocksdb.blobdb.write.blob.ttl COUNT : 0
+rocksdb.blobdb.blob.file.bytes.written COUNT : 0
+rocksdb.blobdb.blob.file.bytes.read COUNT : 0
+rocksdb.blobdb.blob.file.synced COUNT : 0
+rocksdb.blobdb.blob.index.expired.count COUNT : 0
+rocksdb.blobdb.blob.index.expired.size COUNT : 0
+rocksdb.blobdb.blob.index.evicted.count COUNT : 0
+rocksdb.blobdb.blob.index.evicted.size COUNT : 0
+rocksdb.blobdb.gc.num.files COUNT : 0
+rocksdb.blobdb.gc.num.new.files COUNT : 0
+rocksdb.blobdb.gc.failures COUNT : 0
+rocksdb.blobdb.gc.num.keys.overwritten COUNT : 0
+rocksdb.blobdb.gc.num.keys.expired COUNT : 0
+rocksdb.blobdb.gc.num.keys.relocated COUNT : 0
+rocksdb.blobdb.gc.bytes.overwritten COUNT : 0
+rocksdb.blobdb.gc.bytes.expired COUNT : 0
+rocksdb.blobdb.gc.bytes.relocated COUNT : 0
+rocksdb.blobdb.fifo.num.files.evicted COUNT : 0
+rocksdb.blobdb.fifo.num.keys.evicted COUNT : 0
+rocksdb.blobdb.fifo.bytes.evicted COUNT : 0
+rocksdb.txn.overhead.mutex.prepare COUNT : 0
+rocksdb.txn.overhead.mutex.old.commit.map COUNT : 0
+rocksdb.txn.overhead.duplicate.key COUNT : 0
+rocksdb.txn.overhead.mutex.snapshot COUNT : 0
+rocksdb.txn.get.tryagain COUNT : 0
+rocksdb.number.multiget.keys.found COUNT : 0
+rocksdb.num.iterator.created COUNT : 0
+rocksdb.num.iterator.deleted COUNT : 0
+rocksdb.block.cache.compression.dict.miss COUNT : 0
+rocksdb.block.cache.compression.dict.hit COUNT : 0
+rocksdb.block.cache.compression.dict.add COUNT : 0
+rocksdb.block.cache.compression.dict.bytes.insert COUNT : 0
+rocksdb.block.cache.compression.dict.bytes.evict COUNT : 0
+rocksdb.block.cache.add.redundant COUNT : 0
+rocksdb.block.cache.index.add.redundant COUNT : 0
+rocksdb.block.cache.filter.add.redundant COUNT : 0
+rocksdb.block.cache.data.add.redundant COUNT : 0
+rocksdb.block.cache.compression.dict.add.redundant COUNT : 0
+rocksdb.files.marked.trash COUNT : 0
+rocksdb.files.deleted.immediately COUNT : 0
+rocksdb.error.handler.bg.errro.count COUNT : 0
+rocksdb.error.handler.bg.io.errro.count COUNT : 0
+rocksdb.error.handler.bg.retryable.io.errro.count COUNT : 0
+rocksdb.error.handler.autoresume.count COUNT : 0
+rocksdb.error.handler.autoresume.retry.total.count COUNT : 0
+rocksdb.error.handler.autoresume.success.count COUNT : 0
+rocksdb.db.get.micros P50 : 61.041007 P95 : 109.749279 P99 : 368.743937 P100 : 98389.000000 COUNT : 5000000 SUM : 337471326
+rocksdb.db.write.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.compaction.times.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.compaction.times.cpu_micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.subcompaction.setup.times.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.table.sync.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.compaction.outfile.sync.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.wal.file.sync.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.manifest.file.sync.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.table.open.io.micros P50 : 760.444444 P95 : 15733.333333 P99 : 16104.000000 P100 : 16104.000000 COUNT : 94 SUM : 254955
+rocksdb.db.multiget.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.read.block.compaction.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.read.block.get.micros P50 : 2.834301 P95 : 3.937671 P99 : 79.685581 P100 : 24379.000000 COUNT : 41659458 SUM : 188565650
+rocksdb.write.raw.block.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.l0.slowdown.count P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.memtable.compaction.count P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.num.files.stall.count P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.hard.rate.limit.delay.count P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.soft.rate.limit.delay.count P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.numfiles.in.singlecompaction P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.db.seek.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.db.write.stall P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.sst.read.micros P50 : 1.085145 P95 : 1.940683 P99 : 69.301672 P100 : 24356.000000 COUNT : 41659740 SUM : 109477844
+rocksdb.num.subcompactions.scheduled P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.bytes.per.read P50 : 1024.000000 P95 : 1024.000000 P99 : 1024.000000 P100 : 1024.000000 COUNT : 5000000 SUM : 5120000000
+rocksdb.bytes.per.write P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.bytes.per.multiget P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.bytes.compressed P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.bytes.decompressed P50 : 3649.997336 P95 : 4325.002780 P99 : 4385.003264 P100 : 553108.000000 COUNT : 41659458 SUM : 182832984571
+rocksdb.compression.times.nanos P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.decompression.times.nanos P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.read.num.merge_operands P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.key.size P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.value.size P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.write.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.get.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.multiget.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.seek.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.next.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.prev.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.blob.file.write.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.blob.file.read.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.blob.file.sync.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.gc.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.compression.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.decompression.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.db.flush.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.sst.batch.size P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.num.index.and.filter.blocks.read.per.level P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.num.data.blocks.read.per.level P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.num.sst.read.per.level P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.error.handler.autoresume.retry.count P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+
+benchmark.Run() end : 1627589545403858

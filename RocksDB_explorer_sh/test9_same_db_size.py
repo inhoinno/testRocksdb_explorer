@@ -2,11 +2,14 @@ import os
 from collections import defaultdict
 DEV_PATH="../mnt"
 RESULT_PATH="../result_txt"
-NUM=5000000
+NUM= 55000000  #~25GB
+#UM=110000000  #~50GB
+#UM=210000000  #100.13GB
+#UM=1250000000 #596.04GB
 RESULT_FILE="test9_COMPACTIONSTYLE_BENCH_kKEY_vVALUE.txt"
 NAME="test9_report_COMPACTIONSTYLE_BENCH_kKEY_vVALUE.csv"
 key_vars=[16,32,64,128,256,1024]
-value_vars=[64,128,256,512,1024,4096]
+value_vars=[64, 128,256,512,1024,4096]
 
 target_num = (256+256)*NUM
 d = defaultdict(dict)

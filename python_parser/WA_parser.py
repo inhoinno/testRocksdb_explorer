@@ -36,6 +36,10 @@ while line != '':
        #fw.write(','.join(mylist))
        mylist=re.split(r'\s+',' '.join(mylist))
        mylist=mylist[1:]
+       if mylist[3] == 'GB':
+           mylist[2] = str(float(mylist[2])*1024)
+       elif mylist[3] == 'TB':
+           mylist[2] = str(float(mylist[2])*1024*1024)
        del mylist[3]
        mylist.append('\n')
        #print(2,','.join(mylist))
