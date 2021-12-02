@@ -363,7 +363,9 @@ struct BlockBasedTableOptions {
   // treated as 4, a value of 19 will be treated as 16.
   //
   // Default: 0 (disabled)
-  uint32_t read_amp_bytes_per_bit = 0;
+  //set 16 for check read_amp, (d    efault 0)Inho Song
+  //but, this not worked
+  uint32_t read_amp_bytes_per_bit = 16; 
 
   // We currently have five versions:
   // 0 -- This version is currently written out by all RocksDB's versions by

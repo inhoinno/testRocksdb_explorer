@@ -41,25 +41,31 @@ bool FindIntraL0Compaction(const std::vector<FileMetaData*>& level_files,
                            uint64_t max_compaction_bytes,
                            CompactionInputFiles* comp_inputs,
                            SequenceNumber earliest_mem_seqno) {
-  // Do not pick ingested file when there is at least one memtable not flushed
+  // Do not pick ingested file(let's say 'Compacted already by former FindIntraL0Compaction', inhoinno) when there is at least one memtable not flushed
   // which of seqno is overlap with the sst.
   TEST_SYNC_POINT("FindIntraL0Compaction");
   size_t start = 0;
   for (; start < level_files.size(); start++) {
-    if (level_files[start]->being_compacted) {
-      return false;
+    if (level_files[start]->being_compacted) {  //iterate "files" and check this file is being compacted(=is this file undergoing compaction?) , inhoinno
+      return false;     //if some files being undergoing compaction, then quit this function
     }
     // If there is no data in memtable, the earliest sequence number would the
     // largest sequence number in last memtable.
     // Because all files are sorted in descending order by largest_seqno, so we
     // only need to check the first one.
     if (level_files[start]->fd.largest_seqno <= earliest_mem_seqno) {
-      break;
+      break;    //if some files' largest_seqno is smaller than erliest_mem_seqno
+      //break loop(= level files are older than memtable file, which is ordinary, seqno = WAL sequence number) inhoinno
     }
   }
   if (start >= level_files.size()) {
-    return false;
+    return false; 
+    //if we looped whole files, which means all files are not being compacted and all files are later(more recent) than earliest_mem_seq, 
+    // we dont need to intra-compact L0, inhoinno
+    // 
+    //db/compaction/compaction_picker_level.cc:494, db/compaction/compaction_picker_fifo.cc:145
   }
+  //COMPACTION HERE : regardless of density of overlapping key range, it seems that compaction invoked in full file size, inhoinno 
   size_t compact_bytes = static_cast<size_t>(level_files[start]->fd.file_size);
   uint64_t compensated_compact_bytes =
       level_files[start]->compensated_file_size;

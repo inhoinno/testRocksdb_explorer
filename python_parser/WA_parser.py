@@ -9,7 +9,6 @@ file_path_w = sys.argv[2]
 fr = open(file_path_r, 'r')
 fw = open(file_path_w, 'w')
 
-_parser = 'Percentiles:'
 _init_pattern='^=+'
 _init=re.compile(_init_pattern)
 
@@ -42,7 +41,7 @@ while line != '':
            mylist[2] = str(float(mylist[2])*1024*1024)
        del mylist[3]
        mylist.append('\n')
-       #print(2,','.join(mylist))
+       #print(','.join(mylist))
        fw.write(','.join(mylist))
 
 fr.close()
